@@ -27,7 +27,6 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         recources.qrc
-        recources/icons/servers.png
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET LayoutTest APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

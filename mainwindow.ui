@@ -55,14 +55,14 @@
            <enum>QLayout::SizeConstraint::SetFixedSize</enum>
           </property>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="pushButton">
             <property name="text">
              <string>PushButton</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="pushButton_3">
             <property name="text">
              <string>PushButton</string>
             </property>
@@ -100,25 +100,84 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>info</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QLineEdit" name="lineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Auto Refresh</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>PushButton</string>
             </property>
            </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </item>
@@ -149,6 +208,9 @@
    <property name="windowTitle">
     <string>toolBar</string>
    </property>
+   <property name="styleSheet">
+    <string notr="true"> spacing: 10px; height: 50px;</string>
+   </property>
    <property name="toolButtonStyle">
     <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
    </property>
@@ -160,11 +222,18 @@
    </attribute>
    <addaction name="actionServer"/>
    <addaction name="actionBook"/>
+   <addaction name="actionSetting"/>
+   <addaction name="actionReboot"/>
+   <addaction name="actionUpgade"/>
+   <addaction name="actionHelp"/>
+   <addaction name="actionPromotion"/>
+   <addaction name="actionClose"/>
+   <addaction name="actionMore"/>
   </widget>
   <action name="actionServer">
    <property name="icon">
     <iconset resource="recources.qrc">
-     <normaloff>:/resources/icons/recources/icons/servers.png</normaloff>:/resources/icons/recources/icons/servers.png</iconset>
+     <normaloff>:/resources/icons/recources/icons/storage.svg</normaloff>:/resources/icons/recources/icons/storage.svg</iconset>
    </property>
    <property name="text">
     <string>Server</string>
@@ -180,6 +249,90 @@
    </property>
    <property name="text">
     <string>Book</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/resources/icons/recources/icons/settings.svg</normaloff>:/resources/icons/recources/icons/settings.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Setting</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionReboot">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/resources/icons/recources/icons/refresh.svg</normaloff>:/resources/icons/recources/icons/refresh.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Reboot</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionUpgade">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/resources/icons/recources/icons/update.svg</normaloff>:/resources/icons/recources/icons/update.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Upgade</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/resources/icons/recources/icons/help.svg</normaloff>:/resources/icons/recources/icons/help.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionPromotion">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/resources/icons/recources/icons/volume_up.svg</normaloff>:/resources/icons/recources/icons/volume_up.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Promotion</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/resources/icons/recources/icons/remove.svg</normaloff>:/resources/icons/recources/icons/remove.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionMore">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/resources/icons/recources/icons/more_vert.svg</normaloff>:/resources/icons/recources/icons/more_vert.svg</iconset>
+   </property>
+   <property name="text">
+    <string/>
    </property>
    <property name="menuRole">
     <enum>QAction::MenuRole::NoRole</enum>

@@ -1,6 +1,13 @@
 <RCC>
     <qresource prefix="/resources/icons">
-        <file>recources/icons/servers.png</file>
         <file>recources/icons/book.svg</file>
+        <file>recources/icons/help.svg</file>
+        <file>recources/icons/refresh.svg</file>
+        <file>recources/icons/remove.svg</file>
+        <file>recources/icons/settings.svg</file>
+        <file>recources/icons/update.svg</file>
+        <file>recources/icons/volume_up.svg</file>
+        <file>recources/icons/storage.svg</file>
+        <file>recources/icons/more_vert.svg</file>
     </qresource>
 </RCC>

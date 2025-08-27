@@ -11,7 +11,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     //
     auto toolbar = ui->toolBar;
+
+    auto separator = new QWidget(this);
+    separator->setFixedSize(2, 24); // # 2 pixels wide, 24 pixels tall
+    separator->setStyleSheet("background-color: darkgray;");
+
+
+
     auto bookAction = findActionByName(toolbar, "actionBook");
+    toolbar->insertWidget(bookAction, separator);
+
     if (bookAction) {
         bookMenu = new QMenu(this);
         auto actionA = new QAction("Open", this);
